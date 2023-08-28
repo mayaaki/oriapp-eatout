@@ -1,24 +1,74 @@
-# README
+# テーブル設計
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## usersテーブル
 
-Things you may want to cover:
+| Column             | Type   | Options                   |
+| ------------------ | ------ | --------------------------|
+| nickname           | string | null: false               |
+| email              | string | null: false, unique: true |
+| encrypted_password | string | null: false               |
+| prefecture_id      | integer| null: false               |
+| city               | string | null: false               |
+| anniversary_date   | date   | null: false               |
 
-* Ruby version
 
-* System dependencies
+### Association
+- has_many :budgets
+- has_many :records
 
-* Configuration
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+## budgetsテーブル
 
-* Services (job queues, cache servers, search engines, etc.)
+| Column                 | Type       | Options                       |
+| ---------------------- | ---------- | ------------------------------|
+| item_name              | string     | null: false                   |
+| item_text              | text       | null: false                   |
+| category_id            | integer    | null: false                   |
+| status_id              | integer    | null: false                   |
+| responsibility_id      | integer    | null: false                   |
+| prefecture_id          | integer    | null: false                   |
+| schedule_delivery_id   | integer    | null: false                   |
+| price                  | integer    | null: false                   |
+| user                   | references | null: false, foreign_key: true|
 
-* Deployment instructions
+### Association
+- belongs_to :user
+- has_many :records
 
-* ...
+
+
+
+## recordsテーブル
+
+| Column                 | Type       | Options                       |
+| ---------------------- | ---------- | ------------------------------|
+| date                   | date       | null: false                   |
+| restaurant_name        | string     | null: false                   |
+| price                  | integer    | null: false                   |
+| prefecture_id          | integer    | null: false                   |
+| city                   | string     | null: false                   |
+| situation_id           | integer    | null: false                   |
+| genre_id               | integer    | null: false                   |
+| url                    | text       | null: false                   |
+| budget                 | references | null: false, foreign_key: true|
+
+### Association
+- belongs_to :budget
+- has_one :favorite
+
+
+
+
+
+## favoritesテーブル
+| Column             | Type      | Options                       |
+| ------------------ | --------- | ------------------------------|
+| user               | references| null: false, foreign_key: true|
+| record             | references| null: false, foreign_key: true|
+
+
+### Association
+- belongs_to :user
+- belongs_to :records
