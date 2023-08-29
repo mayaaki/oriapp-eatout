@@ -23,14 +23,10 @@
 
 | Column                 | Type       | Options                       |
 | ---------------------- | ---------- | ------------------------------|
-| item_name              | string     | null: false                   |
-| item_text              | text       | null: false                   |
-| category_id            | integer    | null: false                   |
-| status_id              | integer    | null: false                   |
-| responsibility_id      | integer    | null: false                   |
-| prefecture_id          | integer    | null: false                   |
-| schedule_delivery_id   | integer    | null: false                   |
-| price                  | integer    | null: false                   |
+| first_date             | date       | null: false                   |
+| last_date              | date       | null: false                   |
+| budgets                | integer    | null: false                   |
+| users                  | integer    | null: false                   |
 | user                   | references | null: false, foreign_key: true|
 
 ### Association
