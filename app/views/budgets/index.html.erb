@@ -1,0 +1,18 @@
+<div class="contents">
+  <div class="first-view">
+    <%= image_tag "topimage.png", class:"top-image" %>
+    <ul class='budgets-lists'>
+      <% if @budgets.present? %>
+        <% @budgets.each do |budget| %>
+          <li class='list'>
+          <%= budget %>
+          </li>
+        <% end %>
+      <% else %>
+        <li class='list'>
+          sample
+        </li>
+      <% end %>
+  </ul>
+  </div>
+</div>

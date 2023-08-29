@@ -1,0 +1,115 @@
+/* リセットCSS */
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+ul,
+li,
+h1,
+h2,
+p,
+div {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN W3", sans-serif;
+  color: #3b4043;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: #3b4043;
+}
+
+/* ヘッダー */
+
+.header {
+  width: 100vw;
+  background-color: #ffdaa3;
+  padding: 20px 0;
+}
+.inner {
+  width: 100vw;
+  margin: 0 auto;
+}
+.nav {
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 200px;
+  padding: 20px 30px;
+}
+
+.user_nav{
+  padding: 0px 30px;
+}
+
+.nav__btn{
+  display: inline-block;
+  padding: 0.6em 1.8em;
+  font-size: 1.2em;
+  color: #f56222;
+  text-decoration: none;
+  user-select: none;
+  border: 1px #f56222 solid;
+  border-radius: 6px;
+  transition: 0.4s ease;
+  background-color: #fffbea;
+} 
+/*.nav__btn:hover{
+  color: #fff;
+  background: #87CEFA;
+}
+
+
+/* フッター */
+
+.copyright{
+  background-color: #ffea97;
+  text-align: center;
+  color: #65635e;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+/* budgetsメイン */
+
+.first-view{
+  position: relative;
+}
+
+.top-image{
+  object-fit: cover;
+  width: 70vw;
+  opacity: 30%;
+}
+
+.budgets-lists{
+  width: 65%;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.list{
+  height: 120px;
+  font-size: 2em;
+  border: 1px #3b4043 solid;
+}
+
+
