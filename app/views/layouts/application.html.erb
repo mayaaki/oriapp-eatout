@@ -11,28 +11,6 @@
   </head>
 
   <body>
-    <header class="header">
-      <div class="inner">
-        <div class="nav">
-          <h1 class="logo"><a href="/">EatOut!!</a></h1>
-          <div class="user_nav">
-            <span>ユーザ名
-              <ul class="user_info">
-                <li>
-                  <%= link_to "マイページ", "#", class: :nav__btn %>
-                  <%= link_to "ログアウト", "#", data: { turbo_method: :delete }, class: :nav__btn %>
-                </li>
-              </ul>
-            </span>
-          </div>
-        </div>
-      </div>
-    </header>
     <%= yield %>
-    <footer>
-      <p class = "copyright">
-        Copyright EatOut! 2023.
-      </p>
-    </footer>
   </body>
 </html>

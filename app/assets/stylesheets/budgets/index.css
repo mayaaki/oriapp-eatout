@@ -1,0 +1,31 @@
+
+/* budgetsメイン */
+
+.first-view{
+  position: relative;
+  display: flex;
+}
+
+.top-image{
+  object-fit: cover;
+  width: 70vw;
+  opacity: 30%;
+}
+
+.budgets-lists{
+  width: 65%;
+  position: absolute;
+  top: 50px;
+  left: 40px;
+}
+
+.list{
+  height: 120px;
+  font-size: 2em;
+  border: 1px #3b4043 solid;
+}
+
+.plus-image{
+  width: 170px;
+  height: 170px;
+}

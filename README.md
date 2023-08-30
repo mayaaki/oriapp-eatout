@@ -9,7 +9,7 @@
 | encrypted_password | string | null: false               |
 | prefecture_id      | integer| null: false               |
 | city               | string | null: false               |
-| anniversary_date   | date   | null: false               |
+| birth_date         | date   | null: false               |
 
 
 ### Association
@@ -40,7 +40,7 @@
 
 | Column                 | Type       | Options                       |
 | ---------------------- | ---------- | ------------------------------|
-| date                   | date       | null: false                   |
+| recording_date         | date       | null: false                   |
 | restaurant_name        | string     | null: false                   |
 | price                  | integer    | null: false                   |
 | prefecture_id          | integer    | null: false                   |
