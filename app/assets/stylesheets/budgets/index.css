@@ -23,9 +23,21 @@
   height: 120px;
   font-size: 2em;
   border: 1px #3b4043 solid;
+  border-radius: 20px;
+  margin-bottom: 30px;
+}
+
+.plus-link{
+  padding: 200px;
 }
 
 .plus-image{
   width: 170px;
   height: 170px;
+}
+
+/* budgetsメイン リスト詳細 */
+
+.list-group{
+  color: #464d52;
 }

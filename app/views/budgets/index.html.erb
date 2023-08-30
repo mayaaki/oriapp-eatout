@@ -7,7 +7,18 @@
       <% if @budgets.present? %>
         <% @budgets.each do |budget| %>
           <li class='list'>
-          <%= budget %>
+            <div class='list-group'>
+              <div class='list-date'>
+                <%= budget.first_date %><span>　～　</span><%= budget.last_date %>
+              </div>
+              <div class='list-budget'>
+                <span>予算：</span>
+                <%= budget.budgets %><span>円</span>
+              </div>
+              <div class='list-users'>
+                <%= budget.users %><span>人</span>
+              </div>
+            </div>
           </li>
         <% end %>
       <% else %>
@@ -16,7 +27,9 @@
         </li>
       <% end %>
     </ul>
-    <%= image_tag "plus.png", class:"plus-image" %>
+    <div class='plus-link'>
+      <%= link_to image_tag("plus.png", class:"plus-image"), new_budget_path %>
+    </div>
   </div>
 </div>
 

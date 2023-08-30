@@ -1,13 +1,12 @@
 .budgets_contents{
-  height: 100vh;
+  height: calc(100vh - 93px - 91px);
   width: 100%;
 }
 
 .container{
   width: 50%;
-  height: calc(100vh - 30px - 30px);
   margin: 0 auto;
-  padding: 150px 100px;
+  padding: 138px 100px;
 }
 
 .container h3 {
@@ -19,6 +18,54 @@
 }
 
 .budgets_container{
-  border: 1px #ffdaa3 solid;
-  padding: 30 20 30;
+  border: 2px #ffdaa3 solid;
+  height: 300px;
+}
+
+.budgets_set{
+  width: 80%;
+  margin-left: 90px;
+}
+
+.budgets-date{
+  height: 30px;
+  font-size: 20px;
+  color: #575555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.budgets-yen{
+  height: 30px;
+  font-size: 20px;
+  color: #575555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.budgets-users{
+  height: 30px;
+  font-size: 20px;
+  color: #575555;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  margin-left: 30px;
+}
+
+.budgets-btn{
+  margin: 0 auto;
+  margin-top: 30px;
+  width: 50%;
+}
+
+.set-red-btn {
+  width: 100%;
+  background: #ea952d;
+  border: 1px solid #ea952d;
+  color: #fff;
+  line-height: 48px;
+  font-size: 14px;
+  cursor: pointer;
 }
