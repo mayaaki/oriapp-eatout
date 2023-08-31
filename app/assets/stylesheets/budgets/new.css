@@ -19,7 +19,7 @@
 
 .budgets_container{
   border: 2px #ffdaa3 solid;
-  height: 300px;
+  height: calc(100vh - 700px);
 }
 
 .budgets_set{

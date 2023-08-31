@@ -3,21 +3,21 @@
 <div class="budgets_contents">
   <div class="container">
     <h3>予算を設定</h3>
+    <%= form_with(model: @budget, local: true) do |form| %>
+      <%= render 'shared/error_messages', model: form.object %>
 
-    <div class="budgets_container">
-      <%= form_with(model: @budget, local: true) do |form| %>
-        <%= render 'shared/error_messages', model: form.object %>
+      <div class="budgets_container">
         <div class='budgets_set'>
           <div class='budgets-date'>
             <span class='budget-date'>期間　　： </span>
-            <%= form.text_field :first_date, placeholder: "例）2023/10/1", id: "first_date" %>
+            <%= form.text_field :first_date, placeholder: "例）2023-10-01", id: "first_date", autocomplete: 'off' %>
             <span>　～　</span>
-            <%= form.text_field :last_date, placeholder: "例）2023/10/31", id: "last_date" %>
+            <%= form.text_field :last_date, placeholder: "例）2023-10-31", id: "last_date", autocomplete: 'off' %>
           </div>
 
           <div class='budgets-yen'>
             <span class='budget-yen'>予算　　：</span>
-            <%= form.text_field :budgets, placeholder: "例）30000" %>
+            <%= form.text_field :budgets, placeholder: "例）30000", autocomplete: 'off' %>
             <span>円</span>
           </div>
           <div class='budgets-users'>
@@ -29,9 +29,10 @@
             <%= form.submit "設定", class:"set-red-btn" %>
           </div>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
 
 <%= render "shared/footer" %>
+
