@@ -54,6 +54,19 @@
   margin-right: 30px;
 }
 
+.note-tags{
+  display: flex;
+}
+
+.note-tag{
+  padding-left: 30px;
+}
+
+.note-image{
+  width: 50px;
+  height: 50px;
+}
+
 .arrow-image{
   width: 30px;
   height: 30px;
