@@ -7,16 +7,33 @@
       <% if @budgets.present? %>
         <% @budgets.each do |budget| %>
           <li class='list'>
-            <div class='list-group'>
-              <div class='list-date'>
-                <%= budget.first_date %><span>　～　</span><%= budget.last_date %>
+            <div class='list-groups'>
+              <div class='list-dates'>
+                <div class='list-date'>
+                  <%= budget.first_date %><span>　～　</span><%= budget.last_date %>
+                </div>
+                <div class='list-tag'>
+                  <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                </div>
+                <div class="more_lists">
+                  <ul class="more_list">
+                    <li class="dropdown__list">
+                      <%= link_to '編集', "" %>
+                    </li>
+                    <li class="dropdown__list">
+                      <%= link_to '削除', "", data: { turbo_method: :delete } %>
+                    </li>
+                  </ul>
+                </div>
               </div>
-              <div class='list-budget'>
-                <span>予算：</span>
-                <%= budget.budgets %><span>円</span>
-              </div>
-              <div class='list-users'>
-                <%= budget.users %><span>人</span>
+              <div class='list-budgets'>
+                <div class='list-budget'>
+                  <span>予算：</span>
+                  <%= budget.budgets %><span>円</span>
+                </div>
+                <div class='list-users'>
+                  <%= budget.users %><span>人</span>
+                </div>
               </div>
             </div>
           </li>

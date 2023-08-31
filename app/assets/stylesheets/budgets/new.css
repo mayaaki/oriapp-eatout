@@ -28,12 +28,10 @@
 }
 
 .budgets-date{
+  margin: 40px 0 20px 30px;
   height: 30px;
   font-size: 20px;
   color: #575555;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 30px;
 }
 
 .budgets-yen{

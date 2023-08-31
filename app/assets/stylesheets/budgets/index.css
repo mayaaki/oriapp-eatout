@@ -38,6 +38,28 @@
 
 /* budgetsメイン リスト詳細 */
 
-.list-group{
+.list-groups{
   color: #464d52;
+  margin-left: 20px;
+}
+
+.list-budgets{
+  display: flex;
+  margin-top: 25px;
+}
+
+.list-dates{
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.arrow-image{
+  width: 30px;
+  height: 30px;
+  margin-top: 10px;
+}
+
+.list-users{
+  padding: 0 40px;
 }
