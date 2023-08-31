@@ -14,7 +14,7 @@
 
 ### Association
 - has_many :budgets
-- has_many :records
+- has_many :favorites
 
 
 

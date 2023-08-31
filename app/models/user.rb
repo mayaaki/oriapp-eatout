@@ -15,7 +15,7 @@ class User < ApplicationRecord
   validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
 
   has_many :budgets
+  # has_many :favorites
   extend ActiveHash::Associations::ActiveRecordExtensions
   belongs_to :prefecture
-  #has_many :records
 end

@@ -1,9 +1,10 @@
 class Budget < ApplicationRecord
   belongs_to :user
-  # has_many :records
+  has_many :records
 
   validates :first_date, :last_date, presence: true, format: { with: /\A\d{4}-\d{2}-\d{2}\z/ }
-  validates :budgets, :users, presence: true
+  validates :budgets, presence: true, numericality: { only_integer: true }
+  validates :users, presence: true
   validate :start_end_check
 
   def start_end_check
