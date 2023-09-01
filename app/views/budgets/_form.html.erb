@@ -4,20 +4,20 @@
       <div class="budgets_container">
         <div class='budgets_set'>
           <div class='budgets-date'>
-            <span>期間　　： </span>
-            <%= form.text_field :first_date, placeholder: "例）2023-10-01", id: "first_date", autocomplete: 'off', class: "date-text" %>
+            <span class='budget-date'>期間　　： </span>
+            <%= form.text_field :first_date, placeholder: "例）2023-10-01", id: "first_date", autocomplete: 'off' %>
             <span>　～　</span>
-            <%= form.text_field :last_date, placeholder: "例）2023-10-31", id: "last_date", autocomplete: 'off', class: "date-text" %>
+            <%= form.text_field :last_date, placeholder: "例）2023-10-31", id: "last_date", autocomplete: 'off' %>
           </div>
 
           <div class='budgets-yen'>
-            <span>予算　　：</span>
-            <%= form.text_field :budgets, placeholder: "例）30000", autocomplete: 'off', class: "budget-text" %>
+            <span class='budget-yen'>予算　　：</span>
+            <%= form.text_field :budgets, placeholder: "例）30000", autocomplete: 'off' %>
             <span>円</span>
           </div>
           <div class='budgets-users'>
-            <span>ユーザ数： </span>
-            <%= form.text_field :users, placeholder: "例）2", class: "users-text" %>
+            <span class="budgets-user">ユーザ数： </span>
+            <%= form.text_field :users, placeholder: "例）2" %>
             <span>人</span>
           </div>
           <div class='budgets-btn'>

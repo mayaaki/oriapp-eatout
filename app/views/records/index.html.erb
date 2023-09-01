@@ -17,13 +17,13 @@
                     <%= link_to image_tag('note_top.png', class:"note-image"), "" %>
                   </div>
                 </div>
-                <div class="more">
-                  <div class='list-tag'>
-                    <%= image_tag 'arrow_top.png', class:"arrow-image" %>
-                  </div>
+                <div class='list-tag'>
+                  <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                </div>
+                <div class="more_lists">
                   <ul class="more_list">
                     <li class="dropdown__list">
-                      <%= link_to 'テスト', edit_record_path(record.id) %>
+                      <%= link_to '編集', edit_record_path(record.id) %>
                     </li>
                     <li class="dropdown__list">
                       <%= link_to '削除', record_path(record.id), data: { turbo_method: :delete } %>
@@ -50,7 +50,7 @@
       <% end %>
     </ul>
     <div class='plus-link'>
-      <%= image_tag("noteplus.png", class:"plus-image")%>
+      <%= image_tag("notebig.png", class:"plus-image")%>
     </div>
   </div>
 </div>
