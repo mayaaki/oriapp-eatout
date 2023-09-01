@@ -1,0 +1,52 @@
+<%= form_with(model: [budget, record], local: true) do |form| %>
+  <%= render 'shared/error_messages', model: form.object %>
+
+  <div class="records_container">
+    <div class='records_set'>
+      <div class='recording'>
+        <span class="recording_item">記録日</span>
+        <span class="indispensable">必須</span>
+        <%= form.text_field :recording_date, placeholder: "例）2023-10-01", id: "recording_date", autocomplete: 'off' %>
+      </div>
+      <div class='recording'>
+        <span class="recording_item">レストラン名</span>
+        <span class="indispensable">必須</span>
+        <%= form.text_area :restaurant_name, placeholder: "例）サイゼリヤ（必須 20文字まで)", autocomplete: 'off', maxlength:"20" %>
+      </div>
+      <div class='recording'>
+        使った金額
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.text_field :price, placeholder: "例）3600", autocomplete: 'off' %>
+      <span class='recording_yen'>円</span>
+      <div class="recording">
+        お店の住所（都道府県）
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box", id:"record-prefecture"}) %>
+      <div class='recording'>
+        お店の住所（市町村）
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.text_field :city, placeholder: "例）高槻市", autocomplete: 'off' %>
+      <div class="recording">
+        利用シーン
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.collection_select(:situation_id, Situation.all, :id, :name, {}, {class:"select-box", id:"record-situation"}) %>
+      <div class="recording">
+        料理ジャンル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= form.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box", id:"record-genre"}) %>
+      <div class='recording'>
+        お店のＵＲＬ
+        <span class="optional">任意</span>
+      </div>
+      <%= form.text_field :city, placeholder: "（任意）お店のURLを記述", autocomplete: 'off', rows:"5" %>
+      <div class='record-btn'>
+        <%= form.submit "記録", class:"set-record-btn" %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -3,7 +3,7 @@
 .header {
   width: 100vw;
   background-color: #ffdaa3;
-  height: 93px;
+  height: 130px;
   padding: 20px 0;
 }
 .inner {
@@ -25,7 +25,7 @@
   margin-bottom: 10px;
 }
 .user_nav{
-  padding: 0px 30px;
+  padding: 10px 40px;
 }
 
 .nav__btn{
