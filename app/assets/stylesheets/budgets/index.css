@@ -8,15 +8,15 @@
 
 .top-image{
   object-fit: cover;
-  width: 70vw;
+  width: calc(100vw + 150px);
   opacity: 30%;
 }
 
 .budgets-lists{
-  width: 65%;
+  width: 60vw;
   position: absolute;
   top: 50px;
-  left: 40px;
+  left: 30px;
 }
 
 .list{
@@ -75,4 +75,23 @@
 
 .list-users{
   padding: 0 40px;
+}
+
+/*マウスオーバー*/
+
+.more:hover ul.more_list {
+  display: block;
+}
+
+.more ul.more_list {
+  position: absolute;
+  text-align: left;
+  width: 80px;
+  right: 0;
+  font-size: 12px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
 }

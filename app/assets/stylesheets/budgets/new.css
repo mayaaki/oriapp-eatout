@@ -4,7 +4,8 @@
 }
 
 .container{
-  width: 50%;
+  width: 60%;
+  height: 60%;
   margin: 0 auto;
   padding: 138px 100px;
 }
@@ -19,42 +20,40 @@
 
 .budgets_container{
   border: 2px #ffdaa3 solid;
-  height: calc(100vh - 700px);
+  height: 100%;
 }
 
 .budgets_set{
-  width: 80%;
-  margin-left: 90px;
+  width: 67%;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .budgets-date{
-  margin: 40px 0 20px 30px;
+  margin: 40px 20px 30px;
   height: 30px;
   font-size: 20px;
   color: #575555;
 }
 
 .budgets-yen{
+  margin: 40px 20px 30px;
   height: 30px;
   font-size: 20px;
   color: #575555;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 30px;
 }
 
 .budgets-users{
+  margin: 40px 20px 30px;
   height: 30px;
   font-size: 20px;
   color: #575555;
-  margin-top: 40px;
-  margin-bottom: 20px;
-  margin-left: 30px;
 }
 
 .budgets-btn{
   margin: 0 auto;
   margin-top: 30px;
+  margin-bottom: 30px;
   width: 50%;
 }
 
@@ -66,4 +65,18 @@
   line-height: 48px;
   font-size: 14px;
   cursor: pointer;
+}
+
+/*テキストボックスのサイズ*/
+
+.date-text{
+  width: 200px;
+}
+
+.budget-text{
+  width: 200px;
+}
+
+.users-text{
+  width: 200px;
 }
