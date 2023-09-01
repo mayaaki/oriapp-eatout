@@ -17,15 +17,15 @@
                     <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id) %>
                   </div>
                 </div>
-                <div class='list-tag'>
+                <div class="more">
+               <div class='list-tag'>
                   <%= image_tag 'arrow_top.png', class:"arrow-image" %>
                 </div>
-                <div class="more_lists">
                   <ul class="more_list">
-                    <li class="dropdown__list">
+                    <li>
                       <%= link_to '編集', edit_budget_path(budget.id) %>
                     </li>
-                    <li class="dropdown__list">
+                    <li>
                       <%= link_to '削除', budget_path(budget.id), data: { turbo_method: :delete } %>
                     </li>
                   </ul>
