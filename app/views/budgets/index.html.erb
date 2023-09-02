@@ -4,7 +4,7 @@
   <div class="first-view">
     <%= image_tag "topimage.png", class:"top-image" %>
     <ul class='budgets-lists'>
-      <% if @budgets.present? %>
+      <% if @budgets.present? && user_signed_in? %>
         <% @budgets.each do |budget| %>
           <li class='list'>
             <div class='list-groups'>
@@ -18,7 +18,7 @@
                   </div>
                 </div>
                 <div class="more">
-               <div class='list-tag'>
+              <div class='list-tag'>
                   <%= image_tag 'arrow_top.png', class:"arrow-image" %>
                 </div>
                   <ul class="more_list">

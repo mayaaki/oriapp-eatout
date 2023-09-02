@@ -3,7 +3,9 @@ class BudgetsController < ApplicationController
   before_action :set_budget, only: [:edit, :update]
 
   def index
-    @budgets = Budget.includes(:user).order('created_at DESC')
+    if user_signed_in?
+      @budgets = Budget.includes(:user).where(user_id: current_user.id).order(created_at: :desc)
+    end
   end
 
   def new
