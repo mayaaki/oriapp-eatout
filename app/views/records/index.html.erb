@@ -4,18 +4,13 @@
   <div class="first-view">
     <%= image_tag "subimage.jpg", class:"top-image" %>
     <ul class='records-lists'>
-      <% if @records.present? %>
+      <% if @records.present? && current_user.id == @budget.user_id %>
         <% @records.each do |record| %>
           <li class='list'>
             <div class='list-groups'>
               <div class='list-dates'>
-                <div class='note-tags'>
-                  <div class='list-date'>
-                    <%= record.first_date %><span>　～　</span><%= record.last_date %>
-                  </div>
-                  <div class='note-tag'>
-                    <%= link_to image_tag('note_top.png', class:"note-image"), "" %>
-                  </div>
+                <div class='list-date'>
+                  <span>外食日　</span><%= record.recording_date %>
                 </div>
                 <div class="more">
                   <div class='list-tag'>
@@ -33,11 +28,12 @@
               </div>
               <div class='list-records'>
                 <div class='list-record'>
-                  <span>予算：</span>
-                  <%= record.records %><span>円</span>
+                  <span>レストラン名　</span>
+                  <%= record.restaurant_name %><span>　/　</span>
+                  <%= record.city %>
                 </div>
                 <div class='list-users'>
-                  <%= record.users %><span>人</span>
+                  <%= record.price %><span>円</span>
                 </div>
               </div>
             </div>
@@ -50,7 +46,7 @@
       <% end %>
     </ul>
     <div class='plus-link'>
-      <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id) %>
+      <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
     </div>
   </div>
 </div>

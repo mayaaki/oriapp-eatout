@@ -1,5 +1,5 @@
 <header class='second-header'>
-  <%= link_to image_tag("sample.png", class:"second-logo"), "/" %>
+  <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
 </header>
 
 <%= form_with model: @user, url: user_session_path, class: 'registration-main', local: true do |f| %>
@@ -34,5 +34,5 @@
 <% end %>
 
 <header class='second-footer'>
-  <%= link_to image_tag("sample.png", class:"second-logo"), "/" %>
+  <%= image_tag("second-logo.png", class:"second-logo")%>
 </header>

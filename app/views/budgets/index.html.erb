@@ -1,58 +1,61 @@
-<%= render "shared/header" %>
-
 <div class="contents">
+  <%= render "shared/header" %>
+
   <div class="first-view">
-    <%= image_tag "topimage.png", class:"top-image" %>
-    <ul class='budgets-lists'>
-      <% if @budgets.present? && user_signed_in? %>
-        <% @budgets.each do |budget| %>
-          <li class='list'>
-            <div class='list-groups'>
-              <div class='list-dates'>
-                <div class='note-tags'>
+    <div class="left-view">
+      <%= image_tag "topimage.png", class:"top-image" %>
+      <ul class='budgets-lists'>
+        <% if @budgets.present? && user_signed_in? %>
+          <% @budgets.each do |budget| %>
+            <li class='list'>
+              <div class='list-image'>
+                <div class='image-comment'></div>
+                <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id) %>
+              </div>
+              <div class='list-groups'>
+                <div class='list-dates'>
                   <div class='list-date'>
                     <%= budget.first_date %><span>　～　</span><%= budget.last_date %>
                   </div>
-                  <div class='note-tag'>
-                    <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id) %>
+                  <div class="more">
+                    <div class='list-tag'>
+                      <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                    </div>
+                    <ul class="more_list">
+                      <li>
+                        <%= link_to '編集', edit_budget_path(budget.id) %>
+                      </li>
+                      <li>
+                        <%= link_to '削除', budget_path(budget.id), data: { turbo_method: :delete } %>
+                      </li>
+                    </ul>
                   </div>
                 </div>
-                <div class="more">
-              <div class='list-tag'>
-                  <%= image_tag 'arrow_top.png', class:"arrow-image" %>
-                </div>
-                  <ul class="more_list">
-                    <li>
-                      <%= link_to '編集', edit_budget_path(budget.id) %>
-                    </li>
-                    <li>
-                      <%= link_to '削除', budget_path(budget.id), data: { turbo_method: :delete } %>
-                    </li>
-                  </ul>
+                <div class='list-budgets'>
+                  <div class='list-budget'>
+                    <span>予算：</span>
+                    <%= budget.budgets %><span>円</span>
+                  </div>
+                  <div class='list-users'>
+                    <%= budget.users %><span>人</span>
+                  </div>
                 </div>
               </div>
-              <div class='list-budgets'>
-                <div class='list-budget'>
-                  <span>予算：</span>
-                  <%= budget.budgets %><span>円</span>
-                </div>
-                <div class='list-users'>
-                  <%= budget.users %><span>人</span>
-                </div>
-              </div>
-            </div>
+            </li>
+          <% end %>
+        <% else %>
+          <li class='list'>
+            sample
           </li>
         <% end %>
-      <% else %>
-        <li class='list'>
-          sample
-        </li>
-      <% end %>
-    </ul>
-    <div class='plus-link'>
-      <%= link_to image_tag("plus.png", class:"plus-image"), new_budget_path, data: { turbo: false} %>
+      </ul>
+    </div>
+    <div class="right-view">
+      <div class='plus-link'>
+        <%= link_to image_tag("plus.png", class:"plus-image"), new_budget_path, data: { turbo: false} %>
+      </div>
     </div>
   </div>
-</div>
 
-<%= render "shared/footer" %>
+  <%= render "shared/footer" %>
+</div>

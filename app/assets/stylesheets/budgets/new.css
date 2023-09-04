@@ -58,12 +58,15 @@
 }
 
 .set-red-btn {
+  font-weight: 500;
   width: 100%;
-  background: #ea952d;
-  border: 1px solid #ea952d;
+  background: orange;
+  border: 1px solid orange;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 19px;
+  letter-spacing: 4em;
+  text-indent: 4em;
   cursor: pointer;
 }
 

@@ -1,25 +1,43 @@
 
 /* budgetsメイン */
+* {
+  box-sizing: border-box;
+}
+
+.contents{
+  background-color: rgba(179, 140, 119, 0.9);
+  width: 100vw;
+}
 
 .first-view{
   position: relative;
   display: flex;
+  background-color: rgb(255, 249, 231);
+  margin: 0 90px;
+  border-left: 30px rgba(255, 184, 103, 0.8) solid;
+  border-right: 30px rgba(255, 184, 103, 0.8) solid;
+}
+
+.left-view{
+  width: 100%;
 }
 
 .top-image{
   object-fit: cover;
-  width: calc(100vw + 150px);
+  width: 110%;
+  height: 100%;
   opacity: 30%;
 }
 
 .budgets-lists{
-  width: 60vw;
+  width: 60%;
   position: absolute;
   top: 50px;
   left: 30px;
 }
 
 .list{
+  display: flex;
   height: 120px;
   font-size: 2em;
   border: 1px #3b4043 solid;
@@ -38,9 +56,24 @@
 
 /* budgetsメイン リスト詳細 */
 
+.list-image{
+  width: 13%;
+  text-align: center;
+  background-color: rgb(255, 246, 223);
+  border-radius: 20px 0px 0px 20px;
+}
+
+
+.note-image{
+  margin-top: 5px;
+  width: 100px;
+  height: 100px;
+}
+
 .list-groups{
   color: #464d52;
   margin-left: 20px;
+  width: 100%;
 }
 
 .list-budgets{
@@ -52,19 +85,6 @@
   display: flex;
   justify-content: space-between;
   margin-right: 30px;
-}
-
-.note-tags{
-  display: flex;
-}
-
-.note-tag{
-  padding-left: 30px;
-}
-
-.note-image{
-  width: 50px;
-  height: 50px;
 }
 
 .arrow-image{
