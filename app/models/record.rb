@@ -14,9 +14,8 @@ class Record < ApplicationRecord
   validate :date_check
 
   def date_check
-    
-    binding.pry
-    if  budget.first_date < recording_date  && budget.last_date > recording_date 
+    @budget = Budget.find(params[:budget_id])
+    if  @budget.first_date < recording_date  && @budget.last_date > recording_date 
       errors.add(:recording_date, "is out of range.")
     end
   end
