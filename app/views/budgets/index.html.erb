@@ -10,7 +10,7 @@
           <% @budgets.each do |budget| %>
             <li class='list'>
               <div class='list-image'>
-                <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id) %>
+                <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id), data: { turbo: false} %>
               </div>
               <div class='list-groups'>
                 <div class='list-dates'>

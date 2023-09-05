@@ -3,7 +3,7 @@
     <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
   </header>
   <div class="records_main">
-    <h4><%= link_to "記録を編集", budget_records_path(@budget.id) %></h4>
+    <h4><%= link_to "記録を編集", budget_records_path(@budget.id), data: { turbo: false} %></h4>
     <%= form_with(model: [@budget, @record], url: budget_record_path(@budget.id), local: true) do |form| %>
       <%= render partial: "form", locals: { record: @record, budget:@budget, form: form } %>
     <% end %>

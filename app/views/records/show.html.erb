@@ -3,7 +3,7 @@
     <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
   </header>
   <div class="records_show_main">
-    <h4><%= link_to "記録の詳細", budget_records_path(@budget.id) %></h4>
+    <h4><%= link_to "記録の詳細", budget_records_path(@budget.id), data: { turbo: false} %></h4>
     <div class="records_container">
       <div class='records_show_set'>
         <div class='recording'>

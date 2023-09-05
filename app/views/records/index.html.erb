@@ -13,11 +13,13 @@
           </div>
           <div class="budget-term-budget">
             <span>設定予算：</span>
-            <%= @budget.budgets %><span>円</span>
+            <span id='budget'><%= @budget.budgets %></span><span>円</span>
           </div>
         </div>
+        <% sum = 0 %>
         <% if @records.present? && current_user.id == @budget.user_id %>
           <% @records.each do |record| %>
+            <% sum += record.price %>
             <li class='list'>
               <div class='list-image'>
               </div>
@@ -40,7 +42,7 @@
                         <%= link_to '編集', "/budgets/#{record.budget_id}/records/#{record.id}/edit" %>
                       </li>
                       <li class="dropdown__list">
-                        <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete }  %>
+                        <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete }%>
                       </li>
                     </ul>
                   </div>
@@ -54,6 +56,7 @@
               </div>
             </li>
           <% end %>
+          <span id="record-sum"><%= sum %></span>
         <% else %>
           <li class='list'>
             sample
@@ -65,9 +68,16 @@
       <div class='plus-link'>
         <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
       </div>
-      <div class="chart-wrapper">
-        <canvas id="myChart"></canvas>
-      </div>
+      <% if sum <= @budget.budgets %>
+        <div class="chart-wrapper">
+          <canvas id="myChart"></canvas>
+        </div>
+      <% else %>
+        <span class="budget-over">予算を上回っています。</span>
+        <div class="chart-wrapper">
+          <canvas id="myChart"></canvas>
+        </div>
+      <% end %>
     </div>
   </div>
   <%= render "shared/footer" %>

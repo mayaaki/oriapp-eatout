@@ -6,7 +6,6 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.includes(:budget).order('recording_date DESC')
-    
   end
 
   def new
