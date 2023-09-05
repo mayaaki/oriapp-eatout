@@ -2,6 +2,7 @@
 /* budgetsメイン */
 * {
   box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
 .contents{
@@ -22,18 +23,39 @@
   width: 100%;
 }
 
+.right-view{
+  width: 45%
+}
+
 .top-image{
   object-fit: cover;
-  width: 110%;
+  width: 100%;
   height: 100%;
   opacity: 30%;
 }
 
+
+.h5{
+  margin: 0 auto;
+}
+
+
+.budget-title {
+  font-size: 40px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 2px #666 solid;
+}
+
 .budgets-lists{
-  width: 60%;
+  height: 91%;
+  width: 62%;
   position: absolute;
   top: 50px;
   left: 30px;
+  overflow-y: scroll;
 }
 
 .list{
@@ -46,12 +68,13 @@
 }
 
 .plus-link{
-  padding: 200px;
+  padding: 150px 10px;
+  text-align: center;
 }
 
 .plus-image{
-  width: 170px;
-  height: 170px;
+  width: 200px;
+  height: 200px;
 }
 
 /* budgetsメイン リスト詳細 */
@@ -94,7 +117,7 @@
 }
 
 .list-users{
-  padding: 0 40px;
+  padding: 0 50px;
 }
 
 /*マウスオーバー*/

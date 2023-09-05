@@ -5,11 +5,11 @@
     <div class="left-view">
       <%= image_tag "topimage.png", class:"top-image" %>
       <ul class='budgets-lists'>
+        <h5><div class="budget-title">予算一覧</div></h5>
         <% if @budgets.present? && user_signed_in? %>
           <% @budgets.each do |budget| %>
             <li class='list'>
               <div class='list-image'>
-                <div class='image-comment'></div>
                 <%= link_to image_tag('note_top.png', class:"note-image"), budget_records_path(budget.id) %>
               </div>
               <div class='list-groups'>

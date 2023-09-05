@@ -11,15 +11,6 @@ class Record < ApplicationRecord
   validates :situation_id, numericality: { other_than: 1, message: "can't be blank" }
   validates :genre_id, numericality: { other_than: 1, message: "can't be blank" }
 
-  validate :date_check
-
-  def date_check
-    @budget = Budget.find(params[:budget_id])
-    if  @budget.first_date < recording_date  && @budget.last_date > recording_date 
-      errors.add(:recording_date, "is out of range.")
-    end
-  end
-
   belongs_to :budget
   # has_one :favorite
 

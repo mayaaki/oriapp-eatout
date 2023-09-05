@@ -14,6 +14,11 @@
   padding: 10vh 15vw;
 }
 
+.records_main h4 a{
+  text-decoration: none;
+  color: #666;
+}
+
 .records_main h4 {
   margin: 0 0 80px;
   text-align: center;

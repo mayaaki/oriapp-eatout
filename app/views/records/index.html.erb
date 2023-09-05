@@ -1,54 +1,75 @@
-<%= render "shared/header" %>
-
 <div class="contents">
+  <%= render "shared/header" %>
+
   <div class="first-view">
-    <%= image_tag "subimage.jpg", class:"top-image" %>
-    <ul class='records-lists'>
-      <% if @records.present? && current_user.id == @budget.user_id %>
-        <% @records.each do |record| %>
-          <li class='list'>
-            <div class='list-groups'>
-              <div class='list-dates'>
-                <div class='list-date'>
-                  <span>外食日　</span><%= record.recording_date %>
-                </div>
-                <div class="more">
-                  <div class='list-tag'>
-                    <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+    <div class="left-view">
+      <%= image_tag "subimage.jpg", class:"top-image" %>
+      <ul class='records-lists'>
+        <h5><div class="budget-title">記録一覧</div></h5>
+        <div class="budget-term">
+          <div class="budget-term-date">
+            <span>期間：</span>
+            <%= @budget.first_date %><span>～</span><%= @budget.last_date %>
+          </div>
+          <div class="budget-term-budget">
+            <span>設定予算：</span>
+            <%= @budget.budgets %><span>円</span>
+          </div>
+        </div>
+        <% if @records.present? && current_user.id == @budget.user_id %>
+          <% @records.each do |record| %>
+            <li class='list'>
+              <div class='list-image'>
+              </div>
+              <div class='list-groups'>
+                <div class='list-dates'>
+                  <div class='list-date'>
+                    <span>外食日　</span><%= record.recording_date %>
+                    <span>　</span>
+                    <%= record.price %><span>円</span>
                   </div>
-                  <ul class="more_list">
-                    <li class="dropdown__list">
-                      <%= link_to '編集', edit_record_path(record.id) %>
-                    </li>
-                    <li class="dropdown__list">
-                      <%= link_to '削除', record_path(record.id), data: { turbo_method: :delete } %>
-                    </li>
-                  </ul>
+                  <div class="more">
+                    <div class='list-tag'>
+                      <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                    </div>
+                    <ul class="more_list">
+                      <li class="dropdown__list">
+                        <%= link_to '詳細', "/budgets/#{record.budget_id}/records/#{record.id}" %>
+                      </li>
+                      <li class="dropdown__list">
+                        <%= link_to '編集', "/budgets/#{record.budget_id}/records/#{record.id}/edit" %>
+                      </li>
+                      <li class="dropdown__list">
+                        <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete }  %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class='list-records'>
+                  <div class='list-record'>
+                    <%= record.restaurant_name %><span>　/　</span>
+                    <%= record.city %>
+                  </div>
                 </div>
               </div>
-              <div class='list-records'>
-                <div class='list-record'>
-                  <span>レストラン名　</span>
-                  <%= record.restaurant_name %><span>　/　</span>
-                  <%= record.city %>
-                </div>
-                <div class='list-users'>
-                  <%= record.price %><span>円</span>
-                </div>
-              </div>
-            </div>
+            </li>
+          <% end %>
+        <% else %>
+          <li class='list'>
+            sample
           </li>
         <% end %>
-      <% else %>
-        <li class='list'>
-          sample
-        </li>
-      <% end %>
-    </ul>
-    <div class='plus-link'>
-      <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
+      </ul>
+    </div>
+    <div class="right-view">
+      <div class='plus-link'>
+        <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="myChart"></canvas>
+      </div>
     </div>
   </div>
+  <%= render "shared/footer" %>
 </div>
 
-<%= render "shared/footer" %>

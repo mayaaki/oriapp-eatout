@@ -1,11 +1,36 @@
 .records-lists{
-  width: 60vw;
+  height: 91%;
+  width: 62%;
   position: absolute;
   top: 50px;
   left: 30px;
+  overflow-y: scroll;
 }
 
 .list-records{
   display: flex;
+  justify-content: space-between;
   margin-top: 10px;
 }
+
+.budget-term{
+  color: #666;
+  margin-bottom: 10px;
+}
+
+
+.budget-term-date{
+  font-size: 25px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #666;
+}
+
+.budget-term-budget{
+  font-size: 34px;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-color: #666;
+}
+
+

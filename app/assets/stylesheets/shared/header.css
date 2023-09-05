@@ -25,7 +25,7 @@
 }
 
 .user_nickname{
-  font-size: 20px;
+  font-size: 22px;
   margin-bottom: 10px;
 }
 .user_nav{
@@ -35,7 +35,7 @@
 .nav__btn{
   display: inline-block;
   padding: 0.6em 1.8em;
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #f56222;
   text-decoration: none;
   user-select: none;
@@ -44,6 +44,8 @@
   transition: 0.4s ease;
   background-color: #fffbea;
 } 
+
+
 /*.nav__btn:hover{
   color: #fff;
   background: #87CEFA;

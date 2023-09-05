@@ -32,21 +32,21 @@
 .budgets-date{
   margin: 40px 20px 30px;
   height: 30px;
-  font-size: 20px;
+  font-size: 22px;
   color: #575555;
 }
 
 .budgets-yen{
   margin: 40px 20px 30px;
   height: 30px;
-  font-size: 20px;
+  font-size: 22px;
   color: #575555;
 }
 
 .budgets-users{
   margin: 40px 20px 30px;
   height: 30px;
-  font-size: 20px;
+  font-size: 22px;
   color: #575555;
 }
 
@@ -64,7 +64,7 @@
   border: 1px solid orange;
   color: #fff;
   line-height: 48px;
-  font-size: 19px;
+  font-size: 20px;
   letter-spacing: 4em;
   text-indent: 4em;
   cursor: pointer;

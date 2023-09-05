@@ -1,0 +1,83 @@
+<div class="records_contents">
+  <header class='second-header'>
+    <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
+  </header>
+  <div class="records_show_main">
+    <h4><%= link_to "記録の詳細", budget_records_path(@budget.id) %></h4>
+    <div class="records_container">
+      <div class='records_show_set'>
+        <div class='recording'>
+          <div class="weight-bold-text">
+            <span class="recording_item">外食日</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.recording_date %>
+          </div>
+        </div>
+        <div class='recording'>
+          <div class="weight-bold-text">
+            <span class="recording_item">レストラン名</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.restaurant_name %>
+          </div>
+        </div>
+        <div class='recording'>
+          <div class="weight-bold-text">
+            <span class="recording_item">使った金額</span>
+          </div>
+          <div class='yen'>
+            <div class='show_recording'>
+              <span class='recording_yen'>￥</span>
+              <%= @record.price %>
+            </div>
+          </div>
+        </div>
+        <div class="recording">
+          <div class="weight-bold-text">
+            <span class="recording_item">お店の住所（都道府県）</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.prefecture.name %>
+          </div>
+        </div>
+        <div class='recording'>
+          <div class="weight-bold-text">
+            <span class="recording_item">お店の住所（市町村）</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.city %>
+          </div>
+        </div>
+        <div class="recording">
+          <div class="weight-bold-text">
+            <span class="recording_item">利用シーン</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.situation.name %>
+          </div>
+        </div>
+        <div class="recording">
+          <div class="weight-bold-text">
+            <span class="recording_item">料理ジャンル</span>
+          </div>
+          <div class = "show_recording">
+            <%= @record.genre.name %>
+          </div>
+        </div>
+        <div class='recording_show'>
+          <div class="weight-bold-text">
+            <span class="recording_item">お店のＵＲＬ</span>
+          </div>
+          <div class = "show_recording_url">
+            <%= @record.url %>
+          </div>
+        </div>
+        <div class='edit-btn'>
+          <%= link_to "編集する", "/budgets/#{@record.budget_id}/records/#{@record.id}/edit", class:"set-edit-btn" %>
+        </div>
+      </div>
+    </div>
+  </div>
+  <%= render "shared/footer" %>
+</div>
