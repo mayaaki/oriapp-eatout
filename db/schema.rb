@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_08_31_080330) do
+ActiveRecord::Schema[7.0].define(version: 2023_09_06_094927) do
   create_table "budgets", charset: "utf8", force: :cascade do |t|
     t.date "first_date", null: false
     t.date "last_date", null: false
@@ -20,6 +20,15 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_080330) do
     t.datetime "updated_at", null: false
     t.bigint "user_id", null: false
     t.index ["user_id"], name: "index_budgets_on_user_id"
+  end
+
+  create_table "favorites", charset: "utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "record_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["record_id"], name: "index_favorites_on_record_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "records", charset: "utf8", force: :cascade do |t|
@@ -54,5 +63,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_08_31_080330) do
   end
 
   add_foreign_key "budgets", "users"
+  add_foreign_key "favorites", "records"
+  add_foreign_key "favorites", "users"
   add_foreign_key "records", "budgets"
 end
