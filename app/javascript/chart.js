@@ -24,3 +24,4 @@ myChart.canvas.parentNode.style.height = '290px';
 myChart.canvas.parentNode.style.width = '290px';
 myChart.canvas.parentNode.style.margin = 'auto';
 
+window.addEventListener("turbo:load", myChart);

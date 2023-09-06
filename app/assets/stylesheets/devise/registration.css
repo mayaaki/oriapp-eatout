@@ -176,3 +176,30 @@
   font-size: 12px;
   font-weight: bold;
 }
+
+/* ユーザー詳細画面 */
+
+.user-form-main{
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+}
+
+.user-recording {
+  min-width: 170px;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px #a19f9f solid;
+}
+
+.users_show_set {
+  font-size: 1.3em;
+  width: 60%;
+  margin: 0 auto;
+}

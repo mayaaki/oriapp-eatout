@@ -1,0 +1,61 @@
+<div class="user-main">
+  <header class='second-header'>
+    <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
+  </header>
+  <div class='user-form-main'>
+    <div class='form-wrap'>
+      <div class='form-header'>
+        <h1 class='form-header-text'>
+          会員情報
+        </h1>
+      </div>
+      <div class="records_container">
+        <div class='users_show_set'>
+          <div class='user-recording'>
+            <div class="weight-bold-text">
+              <span class="recording_item">アカウントネーム</span>
+            </div>
+            <div class = "show_recording">
+              <%= @user.nickname %>
+            </div>
+          </div>
+          <div class='user-recording'>
+            <div class="weight-bold-text">
+              <span class="recording_item">メールアドレス</span>
+            </div>
+            <div class = "show_recording">
+              <%= @user.email %>
+            </div>
+          </div>
+          <div class='user-recording'>
+            <div class="weight-bold-text">
+              <span class="recording_item">住所1(都道府県)</span>
+            </div>
+            <div class = "show_recording">
+              <%= @user.prefecture.name %>
+            </div>
+          </div>
+          <div class='user-recording'>
+            <div class="weight-bold-text">
+              <span class="recording_item">住所2(市町村)</span>
+            </div>
+            <div class = "show_recording">
+              <%= @user.city %>
+            </div>
+          </div>
+          <div class='user-recording'>
+            <div class="weight-bold-text">
+              <span class="recording_item">生年月日or記念日</span>
+            </div>
+            <div class = "show_recording">
+              <%= @user.birth_date %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<header class='second-footer'>
+  <%= image_tag("second-logo.png", class:"second-logo")%>
+</header>
