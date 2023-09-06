@@ -13,7 +13,8 @@
           </div>
           <div class="budget-term-budget">
             <span>設定予算：</span>
-            <span id='budget'><%= @budget.budgets %></span><span>円</span>
+            <span id='budget'><%= @budget.budgets %></span>
+            <span ><%= number_with_delimiter(@budget.budgets, delimiter: ',') %></span><span>円</span><span>　　人数：</span><%= @budget.users %><span>人</span>
           </div>
         </div>
         <% sum = 0 %>
@@ -28,7 +29,7 @@
                   <div class='list-date'>
                     <span>外食日　</span><%= record.recording_date %>
                     <span>　</span>
-                    <%= record.price %><span>円</span>
+                    <%= number_with_delimiter(record.price, delimiter: ',') %><span>円</span>
                   </div>
                   <div class="more">
                     <div class='list-tag'>
@@ -69,11 +70,21 @@
         <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
       </div>
       <% if sum <= @budget.budgets %>
+        <div class="chart-text">
+          <div class="budget-over-text">
+            <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
+          </div>
+        </div>
         <div class="chart-wrapper">
           <canvas id="myChart"></canvas>
         </div>
       <% else %>
-        <span class="budget-over">予算を上回っています。</span>
+        <div class="chart-text">
+          <span class="budget-over">予算を上回っています。</span>
+          <div class="budget-over-text">
+            <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
+          </div>
+        </div>
         <div class="chart-wrapper">
           <canvas id="myChart"></canvas>
         </div>

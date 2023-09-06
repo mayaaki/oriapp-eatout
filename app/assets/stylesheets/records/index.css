@@ -37,3 +37,33 @@
   display: none;
 }
 
+#budget{
+  display: none;
+}
+
+
+.chart-text{
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+
+.budget-over{
+  font-size: 22px;
+  color: #666;
+  font-weight: 600;
+  background-color: rgb(255, 233, 173);
+  border-radius: 10px;
+}
+
+.budget-over-text{
+  width: 100%;
+  font-size: 22px;
+  color: #666;
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-color: rgb(255, 233, 173);
+  border-radius: 10px;
+}
+

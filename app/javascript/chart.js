@@ -4,8 +4,12 @@ const sum = document.getElementById('record-sum').textContent;
 
 
 const myChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'pie',
   data: {
+    labels: [
+         '合計金額',
+         '予算残高'
+    ],
     datasets: [{
       data: [sum, budget-sum],
       backgroundColor: [

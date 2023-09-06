@@ -34,7 +34,7 @@
                 <div class='list-budgets'>
                   <div class='list-budget'>
                     <span>予算：</span>
-                    <%= budget.budgets %><span>円</span>
+                    <%= budget.budgets.to_s(:delimited, delimiter: ',') %><span>円</span>
                   </div>
                   <div class='list-users'>
                     <%= budget.users %><span>人</span>

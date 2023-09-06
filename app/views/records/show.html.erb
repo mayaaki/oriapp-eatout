@@ -29,7 +29,7 @@
           <div class='yen'>
             <div class='show_recording'>
               <span class='recording_yen'>￥</span>
-              <%= @record.price %>
+              <%= @record.price.to_s(:delimited, delimiter: ',') %>
             </div>
           </div>
         </div>
