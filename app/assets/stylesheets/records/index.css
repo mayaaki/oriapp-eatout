@@ -48,6 +48,10 @@
   margin-bottom: 10px;
 }
 
+.none-chart {
+  text-align: center;
+}
+
 
 .budget-over{
   font-size: 22px;
@@ -67,6 +71,37 @@
   border-radius: 10px;
 }
 
+/*sample表示*/
+
+.sample-heart{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sample-contents{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.sample-content{
+  text-align: center;
+  margin-top: 10px;
+}
+
+.sample-text{
+  color: #666;
+  font-size: 25px;
+  background-color: rgb(254, 247, 231);
+  border-radius: 10px;
+}
+
+.sample-title{
+  color: #666;
+  font-size: 40px;
+  margin: 0 auto;
+}
+
+
 /*お気に入り機能*/
 
 .list-heart-image{
@@ -80,8 +115,5 @@
 
 .heart-image{
   width: 70%;
-}
-
-div#like-btn13 {
-  padding-top: 15%;
+  margin-top: 15%;
 }

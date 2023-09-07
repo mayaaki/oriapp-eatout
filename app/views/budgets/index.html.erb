@@ -44,9 +44,42 @@
             </li>
           <% end %>
         <% else %>
+          <div class="sample-content">
+            <span class=sample-title>＜sample＞</span>
+          </div>
           <li class='list'>
-            sample
+            <div class='list-heart-image'>
+              <%= image_tag "note_top.png", class:"sample-heart"%>
+            </div>
+            <div class='list-groups'>
+              <div class='list-dates'>
+                <div class='list-date'>
+                  <span>yyyy-mm-dd　～　yyyy-mm-dd</span>
+                </div>
+                <div class="more">
+                  <div class='list-tag'>
+                    <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                  </div>
+                  <ul class="more_list">
+                    <li class="dropdown__list">
+                      <span>編集・削除が可能</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class='list-records'>
+                <div class='list-record'>
+                  <span>予算：XXXXXX円</span>
+                  <span>　　＊人（予算共有人数）</span>
+                </div>
+              </div>
+            </div>
           </li>
+          <div class="sample-contents">
+            <span class="sample-text">☆Add Budgetボタン(画面右側)より予算を追加しましょう！</span><p>
+            <span class="sample-text">予算追加後にリスト内のAdd Recordボタンより記録ができます！</span><p>
+            <span class=sample-user>※予算の設定にはログインが必要です。</span>
+          </div>
         <% end %>
       </ul>
     </div>

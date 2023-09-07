@@ -64,9 +64,41 @@
           <% end %>
           <span id="record-sum"><%= sum %></span>
         <% else %>
+          <div class="sample-content">
+            <span class=sample-title>＜sample＞</span>
+          </div>
           <li class='list'>
-            sample
+            <div class='list-heart-image'>
+              <%= image_tag "sampleheart.png", class:"sample-heart"%>
+            </div>
+            <div class='list-groups'>
+              <div class='list-dates'>
+                <div class='list-date'>
+                  <span>外食日　yyyy-mm-dd</span>
+                  <span>　</span>
+                  <span>使用金額　XXXXX円</span>
+                </div>
+                <div class="more">
+                  <div class='list-tag'>
+                    <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                  </div>
+                  <ul class="more_list">
+                    <li class="dropdown__list">
+                      <span>詳細・編集・削除が可能</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class='list-records'>
+                <div class='list-record'>
+                  <span>レストラン名　/　地域</span>
+                </div>
+              </div>
+            </div>
           </li>
+         <div class="sample-contents">
+            <span class=sample-text>☆Add recordボタン(画面右側)から記録を追加しましょう！</span>
+          </div>
         <% end %>
       </ul>
     </div>
@@ -80,9 +112,15 @@
             <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
           </div>
         </div>
-        <div class="chart-wrapper">
-          <canvas id="myChart"></canvas>
-        </div>
+        <% if (sum.to_f / @budget.budgets.to_f * 100).to_i != 0 %>
+          <div class="chart-wrapper">
+            <canvas id="myChart"></canvas>
+          </div>
+        <% else %>
+          <div class="none-chart">
+            <%= image_tag 'nonechart.png', class:"none-chart-image"%>
+          </div>
+        <% end %>
       <% else %>
         <div class="chart-text">
           <span class="budget-over">予算を上回っています。</span>

@@ -1,0 +1,51 @@
+    <div class="favorite-main">
+      <div class="favorite-container">
+        <ul class="favorite-list">
+            <% if @favorites.present? && current_user.id == @budget.user_id %>
+              <% @records.each do |record| %>
+                <% sum += record.price %>
+                <li class='list'>
+                  <div class='list-heart-image'>
+                    <div id="like-btn<%= record.id %>">
+                      <%= render partial: "favorites/favorite", locals: { record: record} %>
+                    </div>
+                  </div>
+                  <div class='list-groups'>
+                    <div class='list-dates'>
+                      <div class='list-date'>
+                        <span>外食日　</span><%= record.recording_date %>
+                        <span>　</span>
+                        <%= number_with_delimiter(record.price, delimiter: ',') %><span>円</span>
+                      </div>
+                      <div class="more">
+                        <div class='list-tag'>
+                          <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                        </div>
+                        <ul class="more_list">
+                          <li class="dropdown__list">
+                            <%= link_to '詳細', "/budgets/#{record.budget_id}/records/#{record.id}" %>
+                          </li>
+                          <li class="dropdown__list">
+                            <%= link_to '編集', "/budgets/#{record.budget_id}/records/#{record.id}/edit" %>
+                          </li>
+                          <li class="dropdown__list">
+                            <div id="delete-btn<%= record.id %>">
+                              <%= render partial: "delete", locals: { record: record} %>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class='list-records'>
+                      <div class='list-record'>
+                        <%= record.restaurant_name %><span>　/　</span>
+                        <%= record.city %>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              <% end %>
+            <% end %>
+        </ul>
+      </div>
+    </div>
