@@ -67,3 +67,21 @@
   border-radius: 10px;
 }
 
+/*お気に入り機能*/
+
+.list-heart-image{
+  width: 13%;
+  text-align: center;
+  background-color: rgb(255, 246, 223);
+  border-radius: 20px 0px 0px 20px;
+  display: flex;
+  align-items: center;
+}
+
+.heart-image{
+  width: 70%;
+}
+
+div#like-btn13 {
+  padding-top: 15%;
+}

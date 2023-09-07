@@ -26,7 +26,7 @@
                         <%= link_to '編集', edit_budget_path(budget.id) %>
                       </li>
                       <li>
-                        <%= link_to '削除', budget_path(budget.id), data: { turbo_method: :delete } %>
+                        <%= link_to '削除', budget_path(budget.id), data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか?' } %>
                       </li>
                     </ul>
                   </div>

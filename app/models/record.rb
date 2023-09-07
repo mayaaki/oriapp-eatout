@@ -12,10 +12,10 @@ class Record < ApplicationRecord
   validates :genre_id, numericality: { other_than: 1, message: "can't be blank" }
 
   belongs_to :budget
-  has_one :favorite
+  has_one :favorite, dependent: :destroy
 
   def liked_by?(user)
-    favorites.where(user_id: user.id).exists?
+    favorite.present? && favorite.user_id == user.id
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions

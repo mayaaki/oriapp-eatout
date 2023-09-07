@@ -36,10 +36,10 @@
       </div>
       <div class='recording'>
         <div class="weight-bold-text">
-          <span class="recording_item">お店の住所（市町村）</span>
+          <span class="recording_item">お店の住所（市区町村）</span>
           <span class="indispensable">必須</span>
         </div>
-        <%= form.text_field :city, placeholder: "例）高槻市", autocomplete: 'off', class: 'recording_city' %>
+        <%= form.text_field :city, placeholder: "例）横浜市緑区", autocomplete: 'off', class: 'recording_city' %>
       </div>
       <div class="recording">
         <div class="weight-bold-text">
@@ -63,7 +63,7 @@
         <%= form.text_area :url, placeholder: "（任意）お店のURLを記述", id: "url-form", autocomplete: 'off', rows:"7" , maxlength:"2000", class: 'url' %>
       </div>
       <div class='record-btn'>
-        <%= form.submit "記録", class:"set-record-btn" %>
+        <%= form.submit "記録", class:"set-record-btn", data: { turbo: false} %>
       </div>
     </div>
   </div>

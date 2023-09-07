@@ -1,0 +1,1 @@
+<%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか?'}, remote: true %>
