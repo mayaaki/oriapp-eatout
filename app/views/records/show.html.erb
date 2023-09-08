@@ -78,6 +78,14 @@
         </div>
       </div>
     </div>
+    <div class="move-list">
+      <div class="move-list-text">
+        <%= link_to "記録一覧画面へ戻る⇒", budget_records_path(@budget.id), data: { turbo: false} %>
+      </div>
+      <div class="move-list-text">
+        <%= link_to "お気に入り一覧へ⇒", "/users/#{current_user.id}/favorites" %>
+      </div>
+    </div>
   </div>
   <%= render "shared/footer" %>
 </div>

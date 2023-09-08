@@ -1,10 +1,11 @@
 class BudgetsController < ApplicationController
   before_action :authenticate_user!, except: [:index]
-  before_action :set_budget, only: [:edit, :update]
+  before_action :set_budget, only: [:edit, :update, :destroy]
+  before_action :move_to_index, only: [:edit, :update, :destroy]
 
   def index
     if user_signed_in?
-      @budgets = Budget.includes(:user).where(user_id: current_user.id).order(created_at: :desc)
+      @budgets = Budget.includes(:user).where(user_id: current_user.id).order(first_date: :desc)
     end
   end
 
@@ -46,5 +47,11 @@ class BudgetsController < ApplicationController
 
   def set_budget
     @budget = Budget.find(params[:id])
+  end
+
+  def move_to_index
+    if current_user.id != @budget.user.id
+      redirect_to action: :index
+    end
   end
 end

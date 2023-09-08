@@ -2,6 +2,7 @@ class RecordsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_budget, except: [:destroy]
   before_action :set_record, only: [:show, :edit, :update]
+  before_action :move_to_root
 
 
   def index
@@ -64,6 +65,13 @@ class RecordsController < ApplicationController
     else
       @record.errors.add(:recording_date, "Recording date is outside the valid range")
       return false
+    end
+  end
+
+  def move_to_root
+    @budget = Budget.find(params[:budget_id])
+    if current_user.id != @budget.user.id
+      redirect_to root_path
     end
   end
 end

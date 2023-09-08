@@ -80,6 +80,9 @@
             <span class="sample-text">予算追加後にリスト内のAdd Recordボタンより記録ができます！</span><p>
             <span class=sample-user>※予算の設定にはログインが必要です。</span>
           </div>
+          <div class="concepts">
+            <span class="concept">予算を設定して、<p>気軽に外食を楽しもう!</span>
+          </div>
         <% end %>
       </ul>
     </div>
@@ -87,6 +90,15 @@
       <div class='plus-link'>
         <%= link_to image_tag("plus.png", class:"plus-image"), new_budget_path, data: { turbo: false} %>
       </div>
+      <% if user_signed_in?%>
+        <div class="favorite-link">
+          <%= link_to image_tag("top-heart.png", class:"favorite-image"), "/users/#{current_user.id}/favorites" %>
+        </div>
+      <% else %>
+        <div class="favorite-link">
+          <%= link_to image_tag("top-heart.png", class:"favorite-image"), new_user_session_path %>
+        </div>
+      <% end %>
     </div>
   </div>
 

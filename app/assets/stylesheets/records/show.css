@@ -62,3 +62,23 @@
   cursor: pointer;
   line-height: 60px;
 }
+
+.move-list{
+  text-align: right;
+  margin-top: 50px;
+}
+
+
+.move-list-text a{
+  font-size: 1.2em;
+  text-decoration: none;
+  color: rgb(116, 49, 0);
+  font-weight: 600;
+  text-decoration-line: underline;
+  text-decoration-color: rgb(116, 49, 0);
+  text-decoration-thickness: 2px;
+}
+
+.move-list-text{
+  margin-bottom: 15px;
+}

@@ -1,0 +1,23 @@
+.favorite-main{
+  position: relative;
+  height: 100vh;
+  width: 70%;
+  background-color:  rgb(255, 254, 251);
+  margin: 0 auto;
+  border-left: 30px rgba(255, 184, 103, 0.8) solid;
+  border-right: 30px rgba(255, 184, 103, 0.8) solid;
+}
+
+.favorite-container{
+  width: 100%;
+  height: 100%;
+  padding: 0 8%;
+}
+
+.favorite-list{
+  height: 91%;
+  width: 84%;
+  position: absolute;
+  top: 50px;
+  overflow-y: scroll;
+}

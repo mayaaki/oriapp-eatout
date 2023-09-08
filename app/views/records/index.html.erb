@@ -6,17 +6,19 @@
       <%= image_tag "subimage.jpg", class:"top-image" %>
       <ul class='records-lists'>
         <h5><div class="budget-title">記録一覧</div></h5>
-        <div class="budget-term">
-          <div class="budget-term-date">
-            <span>期間：</span>
-            <%= @budget.first_date %><span>～</span><%= @budget.last_date %>
+        <% if current_user.id == @budget.user_id %>
+          <div class="budget-term">
+            <div class="budget-term-date">
+              <span>期間：</span>
+              <%= @budget.first_date %><span>～</span><%= @budget.last_date %>
+            </div>
+            <div class="budget-term-budget">
+              <span>設定予算：</span>
+              <span id='budget'><%= @budget.budgets %></span>
+              <span ><%= number_with_delimiter(@budget.budgets, delimiter: ',') %></span><span>円</span><span>　　人数：</span><%= @budget.users %><span>人</span>
+            </div>
           </div>
-          <div class="budget-term-budget">
-            <span>設定予算：</span>
-            <span id='budget'><%= @budget.budgets %></span>
-            <span ><%= number_with_delimiter(@budget.budgets, delimiter: ',') %></span><span>円</span><span>　　人数：</span><%= @budget.users %><span>人</span>
-          </div>
-        </div>
+        <% end %>
         <% sum = 0 %>
         <% if @records.present? && current_user.id == @budget.user_id %>
           <% @records.each do |record| %>

@@ -1,0 +1,88 @@
+<div class="contents">
+  <header class='second-header'>
+    <%= link_to image_tag("logo.png", class:"first-logo"), "/" %>
+  </header>
+
+  <div class="favorite-main">
+    <div class="favorite-container">
+      <ul class="favorite-list">
+        <h5><div class="budget-title">お気に入り一覧</div></h5>
+        <% if @favorites.present? && current_user.id == @user.id %>
+          <% @records.each do |record| %>
+            <li class='list'>
+              <div class='list-heart-image'>
+                <div id="like-btn<%= record.id %>">
+                  <%= render partial: "favorites/favorite", locals: { record: record} %>
+                </div>
+              </div>
+              <div class='list-groups'>
+                <div class='list-dates'>
+                  <div class='list-date'>
+                    <span>外食日　</span><%= record.recording_date %>
+                    <span>　金額</span>
+                    <%= number_with_delimiter(record.price, delimiter: ',') %><span>円</span>
+                  </div>
+                  <div class="more">
+                    <div class='list-tag'>
+                      <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                    </div>
+                    <ul class="more_list">
+                      <li class="dropdown__list">
+                        <%= link_to '詳細', "/budgets/#{record.budget_id}/records/#{record.id}" %>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class='list-records'>
+                  <div class='list-record'>
+                    <%= record.restaurant_name %><span>　/　</span>
+                    <%= record.city %>
+                  </div>
+                </div>
+              </div>
+            </li>
+          <% end %>
+        <% else %>
+          <div class="sample-content">
+            <span class=sample-title>＜sample＞</span>
+          </div>
+          <li class='list'>
+            <div class='list-heart-image'>
+              <%= image_tag "sampleheart.png", class:"sample-heart"%>
+            </div>
+            <div class='list-groups'>
+              <div class='list-dates'>
+                <div class='list-date'>
+                  <span>外食日　yyyy-mm-dd</span>
+                  <span>　</span>
+                  <span>金額　XXXXX円</span>
+                </div>
+                <div class="more">
+                  <div class='list-tag'>
+                    <%= image_tag 'arrow_top.png', class:"arrow-image" %>
+                  </div>
+                  <ul class="more_list">
+                    <li class="dropdown__list">
+                      <span>詳細の閲覧が可能</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class='list-records'>
+                <div class='list-record'>
+                  <span>レストラン名　/　地域</span>
+                </div>
+              </div>
+            </div>
+          </li>
+         <div class="sample-contents">
+            <span class=sample-text>☆現在お気に入りの記録はありません☆</span>
+          </div>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+  <header class='second-footer'>
+    <%= image_tag("second-logo.png", class:"second-logo")%>
+  </header>
+</div>

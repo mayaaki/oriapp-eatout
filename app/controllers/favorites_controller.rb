@@ -1,5 +1,13 @@
 class FavoritesController < ApplicationController
-  before_action :set_record
+  before_action :authenticate_user!
+  before_action :set_record, only: [:create, :destroy]
+
+  def index
+    @user = User.find(params[:user_id])
+    @favorites = @user.favorites.includes(:record)
+    favorite_records = Favorite.where(user_id: @user.id).pluck(:record_id)
+    @records = Record.where(id: favorite_records).order(recording_date: :desc)
+  end
 
   def create
     favorite = current_user.favorites.build(record_id: params[:record_id])
@@ -16,6 +24,8 @@ class FavoritesController < ApplicationController
       format.js
     end
   end
+
+  private
 
   def set_record
     @record = Record.find(params[:record_id])
