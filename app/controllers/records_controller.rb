@@ -6,7 +6,7 @@ class RecordsController < ApplicationController
 
 
   def index
-    @records = Record.includes(:budget).order('recording_date DESC')
+    @records = @budget.records.order('recording_date DESC')
   end
 
   def new
@@ -70,7 +70,7 @@ class RecordsController < ApplicationController
 
   def move_to_root
     @budget = Budget.find(params[:budget_id])
-    if current_user.id != @budget.user.id
+    if current_user.id != @budget.user_id
       redirect_to root_path
     end
   end
