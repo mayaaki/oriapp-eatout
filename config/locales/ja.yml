@@ -1,0 +1,21 @@
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: ニックネーム
+        city: 市区町村
+        birth_date: 生年月日or記念日
+        prefecture_id: 都道府県
+      budget:
+        first_date: 開始日
+        last_date: 終了日
+        budgets: 予算
+        users: ユーザー数
+      record:
+        restaurant_name: レストラン名
+        price: 価格
+        city: 市区町村
+        prefecture_id: 都道府県
+        situation_id: 利用シーン
+        genre_id: 料理ジャンル
+        recording_date: 外食日

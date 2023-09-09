@@ -12,7 +12,7 @@ class User < ApplicationRecord
     validates :city, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/ }
     validates :birth_date
   end
-  validates :prefecture_id, numericality: { other_than: 1, message: "can't be blank" }
+  validates :prefecture_id, numericality: { other_than: 1, message: "を選択してください" }
 
   has_many :budgets
   has_many :favorites

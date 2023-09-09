@@ -64,7 +64,7 @@ class RecordsController < ApplicationController
     if @record.recording_date != nil && @record.recording_date >= @budget.first_date && @record.recording_date <= @budget.last_date
       return true
     else
-      @record.errors.add(:recording_date, "Recording date is outside the valid range")
+      @record.errors.add(:recording_date, "は予算設定の期間内の日付を入力してください")
       return false
     end
   end

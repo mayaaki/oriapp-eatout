@@ -9,7 +9,7 @@ class Budget < ApplicationRecord
 
   def start_end_check
     if first_date.present? && last_date.present? && first_date >= last_date
-      errors.add(:last_date, "cannot precede the start date.")
+      errors.add(:last_date, "は開始日より後の日付を入力してください")
     end
   end
 end
