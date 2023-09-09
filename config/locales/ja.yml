@@ -2,7 +2,7 @@ ja:
   activerecord:
     attributes:
       user:
-        nickname: ニックネーム
+        nickname: アカウントネーム
         city: 市区町村
         birth_date: 生年月日or記念日
         prefecture_id: 都道府県
