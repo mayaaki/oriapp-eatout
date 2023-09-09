@@ -8,7 +8,13 @@ class UsersController < ApplicationController
   
   private
   def move_to_root
-    @user = User.find(params[:id]) 
+    begin
+      @user = User.find(params[:id])
+    rescue ActiveRecord::RecordNotFound
+      redirect_to root_path
+      return
+    end
+  
     if current_user.id != @user.id
       redirect_to root_path
     end

@@ -14,8 +14,9 @@ class Record < ApplicationRecord
   belongs_to :budget
   has_one :favorite, dependent: :destroy
 
-  def liked_by?(user)
-    favorite.present? && favorite.user_id == user.id
+  def liked_by?(record, user)
+    favorite = Favorite.find_by(record_id: record.id, user_id: user.id)
+    favorite.present?
   end
 
   extend ActiveHash::Associations::ActiveRecordExtensions

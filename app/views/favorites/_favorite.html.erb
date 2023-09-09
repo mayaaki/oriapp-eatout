@@ -1,4 +1,4 @@
-<% if record.liked_by?(current_user)%>
+<% if record.liked_by?(record, current_user)%>
   <%=link_to image_tag("heart.png", class:"heart-image"), "/budgets/#{record.budget_id}/records/#{record.id}/favorites",  data: { turbo_method: :delete }, class: "record_likes", remote: true, id: "like-btn#{record.id}" %>
 <% else %>
   <%=link_to image_tag("subheart.png", class:"heart-image"), "/budgets/#{record.budget_id}/records/#{record.id}/favorites", data: { turbo_method: :post }, class: "record_likes", remote: true, id: "like-btn#{record.id}" %>

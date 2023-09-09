@@ -3,6 +3,7 @@ class RecordsController < ApplicationController
   before_action :set_budget, except: [:destroy]
   before_action :set_record, only: [:show, :edit, :update]
   before_action :move_to_root
+  before_action :sub_move_to_root, only: [:show, :edit, :update, :destroy]
 
 
   def index
@@ -74,4 +75,13 @@ class RecordsController < ApplicationController
       redirect_to root_path
     end
   end
+
+  def sub_move_to_root
+    @budget = Budget.find(params[:budget_id])
+    @record = Record.find(params[:id])
+    if @record.budget_id != @budget.id
+      redirect_to root_path
+    end
+  end
+
 end
