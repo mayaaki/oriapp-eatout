@@ -105,41 +105,43 @@
       </ul>
     </div>
     <div class="right-view">
-      <div class='plus-link'>
-        <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
-      </div>
-      <% if sum <= @budget.budgets %>
-        <div class="chart-text">
-          <div class="budget-over-text">
-            <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
-          </div>
+      <div class='right-view-contents'>
+        <div class='record-plus-link'>
+          <%= link_to image_tag("noteplus.png", class:"plus-image"),  new_budget_record_path(@budget.id), data: { turbo: false} %>
         </div>
-        <% if (sum.to_f / @budget.budgets.to_f * 100).to_i != 0 %>
+        <% if sum <= @budget.budgets %>
+          <div class="chart-text">
+            <div class="budget-over-text">
+              <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
+            </div>
+          </div>
+          <% if (sum.to_f / @budget.budgets.to_f * 100).to_i != 0 %>
+            <div class="chart-wrapper">
+              <canvas id="myChart"></canvas>
+            </div>
+            <div class="chart-balance">
+              <span>予算残高　￥</span><%= number_with_delimiter(@budget.budgets - sum, delimiter: ',') %>
+            </div>
+          <% else %>
+            <div class="none-chart">
+              <%= image_tag 'nonechart.png', class:"none-chart-image"%>
+            </div>
+          <% end %>
+        <% else %>
+          <div class="chart-text">
+            <span class="budget-over">予算を上回っています。</span>
+            <div class="budget-over-text">
+              <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
+            </div>
+          </div>
           <div class="chart-wrapper">
             <canvas id="myChart"></canvas>
           </div>
           <div class="chart-balance">
             <span>予算残高　￥</span><%= number_with_delimiter(@budget.budgets - sum, delimiter: ',') %>
           </div>
-        <% else %>
-          <div class="none-chart">
-            <%= image_tag 'nonechart.png', class:"none-chart-image"%>
-          </div>
         <% end %>
-      <% else %>
-        <div class="chart-text">
-          <span class="budget-over">予算を上回っています。</span>
-          <div class="budget-over-text">
-            <span>予算に対して、約</span><%= (sum.to_f / @budget.budgets.to_f * 100).to_i %><span>％です。</span>
-          </div>
-        </div>
-        <div class="chart-wrapper">
-          <canvas id="myChart"></canvas>
-        </div>
-        <div class="chart-balance">
-          <span>予算残高　￥</span><%= number_with_delimiter(@budget.budgets - sum, delimiter: ',') %>
-        </div>
-      <% end %>
+      </div>
     </div>
   </div>
   <%= render "shared/footer" %>

@@ -41,6 +41,14 @@
   display: none;
 }
 
+.right-view-contents {
+  margin: 20% 0;
+}
+
+.record-plus-link{
+  padding: 0px 10px 70px;
+  text-align: center;
+}
 
 .chart-text{
   width: 100%;
