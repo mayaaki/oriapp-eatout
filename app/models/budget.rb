@@ -1,6 +1,6 @@
 class Budget < ApplicationRecord
   belongs_to :user
-  has_many :records
+  has_many :records, dependent: :destroy
 
   validates :first_date, :last_date, presence: true, format: { with: /\A\d{4}-\d{2}-\d{2}\z/ }
   validates :budgets, presence: true, numericality: { only_integer: true }
