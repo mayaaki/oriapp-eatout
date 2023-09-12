@@ -41,9 +41,7 @@ class RecordsController < ApplicationController
     record = Record.find(params[:id])
     budget = Budget.find(params[:budget_id])
     record.destroy
-    respond_to do |format|
-      format.js
-    end
+    redirect_to budget_records_path(@budget.id)
   end
 
   private

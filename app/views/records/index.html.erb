@@ -49,7 +49,7 @@
                       </li>
                       <li class="dropdown__list">
                         <div id="delete-btn<%= record.id %>">
-                          <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか?'}, remote: true %>
+                          <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか?'} %>
                         </div>
                       </li>
                     </ul>
@@ -120,7 +120,10 @@
               <canvas id="myChart"></canvas>
             </div>
             <div class="chart-balance">
-              <span>予算残高　￥</span><%= number_with_delimiter(@budget.budgets - sum, delimiter: ',') %>
+              <div class="chart-balances">
+                <span>使用金額　￥</span><%= number_with_delimiter(sum, delimiter: ',') %>
+                <br><span>予算残高　￥</span><%= number_with_delimiter(@budget.budgets - sum, delimiter: ',') %>
+              </div>
             </div>
           <% else %>
             <div class="none-chart">
