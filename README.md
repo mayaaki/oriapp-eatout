@@ -65,35 +65,35 @@ https://docs.google.com/spreadsheets/d/1yvam_ESe6Im-jMSIgE8K8yWxBXCYQCt85avDeh9L
 鉛筆マークから削除をクリックすると、削除して良いのかアラートが出て、OKとすると削除ができます。予算の中の記録も連動して削除されます。
 
 ## 記録一覧ページ
-[![Image from Gyazo](https://i.gyazo.com/208bcd774aeea3db693e20b2ee2a6fd9.gif)](https://gyazo.com/208bcd774aeea3db693e20b2ee2a6fd9)
+[![Image from Gyazo](https://i.gyazo.com/d72ff51922e91d79b88596f3272a6ffb.gif)](https://gyazo.com/d72ff51922e91d79b88596f3272a6ffb)
 予算設定画面からAdd Recordボタンを押すと記録一覧ページに遷移します。  
 すでに2件登録されていますが、なにも登録していない場合は下記のようなサンプルが表示されます。
 [![Image from Gyazo](https://i.gyazo.com/077387d901ec66f276a549f9dc5cd95f.jpg)](https://gyazo.com/077387d901ec66f276a549f9dc5cd95f)
 
 ## 記録設定画面
 ### 設定画面
-[![Image from Gyazo](https://i.gyazo.com/1515da79f98dd33cfd4e1b147992bf50.gif)](https://gyazo.com/1515da79f98dd33cfd4e1b147992bf50)
+[![Image from Gyazo](https://i.gyazo.com/8bbddf84cdc1672b0ae71505c449ae94.gif)](https://gyazo.com/8bbddf84cdc1672b0ae71505c449ae94)
 Add recordボタンを押すと記録設定の画面に遷移します。
 
 
-[![Image from Gyazo](https://i.gyazo.com/da00a0a817d8f2c5286f4dfc85bf6d91.gif)](https://gyazo.com/da00a0a817d8f2c5286f4dfc85bf6d91)
+[![Image from Gyazo](https://i.gyazo.com/fcacc0ea6cbe87026c5fdcf6935f0f75.gif)](https://gyazo.com/fcacc0ea6cbe87026c5fdcf6935f0f75)
 入力エラーがあると、記入したものは消えず、エラー内容が表示されます。
 
 ### 一覧画面に反映、円グラフの表示
-[![Image from Gyazo](https://i.gyazo.com/4249c14dd6a763f38134790fbd6e5dbb.gif)](https://gyazo.com/4249c14dd6a763f38134790fbd6e5dbb)
+[![Image from Gyazo](https://i.gyazo.com/7ff54d73078eac8618678ace03c4e36f.gif)](https://gyazo.com/7ff54d73078eac8618678ace03c4e36f)
 必須事項を全て記入し、記録ボタンを押すと記録一覧画面に反映されます。外食日の新しい順に表示されます。  
 記録一覧画面には、記録の合計金額と予算に対する比率が一目でわかる円グラフが更新されます。  
 
-[![Image from Gyazo](https://i.gyazo.com/782d8db87271ed04625ccd28d57dcaa2.gif)](https://gyazo.com/782d8db87271ed04625ccd28d57dcaa2)
+[![Image from Gyazo](https://i.gyazo.com/ddbbd1c3221eef0fa154d6dceeecf4ec.gif)](https://gyazo.com/ddbbd1c3221eef0fa154d6dceeecf4ec)
 円グラフにカーソルを合わせると内容の詳細が表示されます。
 
 ## 記録の詳細画面
-[![Image from Gyazo](https://i.gyazo.com/c426c7a2459d1939256e3d760ac7af5f.gif)](https://gyazo.com/c426c7a2459d1939256e3d760ac7af5f)
+[![Image from Gyazo](https://i.gyazo.com/9023206f69cb7c488cd711671d59245a.gif)](https://gyazo.com/9023206f69cb7c488cd711671d59245a)
 鉛筆マークから詳細をクリックすると詳細ページに遷移し、詳細ページから編集ページにも遷移が可能です。
 
 ## 記録の編集・削除
 ### 編集
-[![Image from Gyazo](https://i.gyazo.com/e4661fc847ef8ed9c4c11d8ae00a36c8.gif)](https://gyazo.com/e4661fc847ef8ed9c4c11d8ae00a36c8)
+[![Image from Gyazo](https://i.gyazo.com/6066b11bfcd3029a148f3e4f7ad82427.gif)](https://gyazo.com/6066b11bfcd3029a148f3e4f7ad82427)
 鉛筆マークから編集をクリックすると編集画面に遷移します。
 
 ### 削除
@@ -102,7 +102,7 @@ Add recordボタンを押すと記録設定の画面に遷移します。
 
 
 ## お気に入り機能
-[![Image from Gyazo](https://i.gyazo.com/50f6b080d88d6d242f33f5f2a869af32.gif)](https://gyazo.com/50f6b080d88d6d242f33f5f2a869af32)
+[![Image from Gyazo](https://i.gyazo.com/96256bee6c88eaca1a5bbde76ed24165.gif)](https://gyazo.com/96256bee6c88eaca1a5bbde76ed24165)
 ハートのボタンを押すとお気に入り登録・削除ができます。
 
 [![Image from Gyazo](https://i.gyazo.com/f1d9ed5806f37f1162b4e0efea0f21c7.gif)](https://gyazo.com/f1d9ed5806f37f1162b4e0efea0f21c7)
