@@ -109,15 +109,20 @@
 
 .sample-text{
   color: #666;
-  font-size: 25px;
+  font-size: 2.5vh;
   background-color: rgb(254, 247, 231);
   border-radius: 10px;
 }
 
 .sample-title{
   color: #666;
-  font-size: 40px;
+  font-size: 4vh;
   margin: 0 auto;
+}
+
+img.none-chart-image {
+  width: 15.6vw;
+  height: 28vh;
 }
 
 

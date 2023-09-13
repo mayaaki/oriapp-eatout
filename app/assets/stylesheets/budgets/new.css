@@ -1,17 +1,17 @@
 .budgets_contents{
-  height: 100vh;
-  width: 100vh;
+  background-color: antiquewhite;
   margin: 0 auto;
 }
 
 .container{
-  width: 100vh;
+  background-color: #fff;
+  width: 60vw;
   margin: 0 auto;
-  padding: 138px 40px;
+  padding: 10vh 5vw;
 }
 
 .container h3 {
-  margin: 0 0 20px;
+  margin: 0 0 4vh;
   text-align: center;
   font-weight: normal;
   font-size: 3.8vh;
@@ -24,62 +24,63 @@
 }
 
 .budgets_set{
-  width: 70vh;
-  height: 100%;
+  height: auto;
   margin: 0 auto;
+  width: fit-content;
 }
 
 .budgets-date{
   margin: 40px 20px 30px;
-  height: 30px;
-  font-size: 22px;
+  height: 3.2vh;
+  font-size: 2.2vh;
   color: #575555;
 }
 
 .budgets-yen{
   margin: 40px 20px 30px;
-  height: 30px;
-  font-size: 22px;
+  height: 3.2vh;
+  font-size: 2.2vh;
   color: #575555;
 }
 
 .budgets-users{
   margin: 40px 20px 30px;
-  height: 30px;
-  font-size: 22px;
+  height: 3.2vh;
+  font-size: 2.2vh;
   color: #575555;
 }
 
 .budgets-btn{
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 30px;
-  width: 50%;
+  text-align: center;
 }
 
 .set-red-btn {
   font-weight: 500;
-  width: 100%;
+  margin: 2vh;
+  width: 50%;
   background: orange;
   border: 1px solid orange;
   color: #fff;
-  line-height: 48px;
-  font-size: 20px;
-  letter-spacing: 4em;
-  text-indent: 4em;
+  line-height: 4.7vh;
+  font-size: 2vh;
+  letter-spacing: 4vw;
+  text-indent: 4vw;
   cursor: pointer;
 }
 
 /*テキストボックスのサイズ*/
 
 .date-text{
-  width: 200px;
+  width: 11vw;
+  text-align: center;
 }
 
 .budget-text{
-  width: 200px;
+  width: 10vw;
+  text-align: left;
 }
 
 .users-text{
-  width: 200px;
+  width: 10vw;
+  text-align: left;
 }

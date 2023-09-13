@@ -21,7 +21,7 @@ const myChart = new Chart(ctx, {
 });
 
 myChart.canvas.parentNode.style.height = '28vh';
-myChart.canvas.parentNode.style.width = '15vw';
+myChart.canvas.parentNode.style.width = '15.5vw';
 myChart.canvas.parentNode.style.margin = 'auto';
 
 window.addEventListener("turbo:load", myChart);
