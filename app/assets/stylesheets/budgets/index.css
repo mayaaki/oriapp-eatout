@@ -61,7 +61,7 @@
 .list{
   width: 100%;
   display: flex;
-  height: 120px;
+  height: auto;
   font-size: 3.1vh;
   border: 1px #3b4043 solid;
   border-radius: 20px;
@@ -79,8 +79,8 @@
 }
 
 .plus-image{
-  width: 230px;
-  height: 230px;
+  width: 12vw;
+  height: 22vh;
   padding: 20px;
   border: 1px rgba(179, 140, 119, 0.9) solid;
   border-radius: 45px;
@@ -88,8 +88,8 @@
 }
 
 .favorite-image{
-  width: 230px;
-  height: 230px;
+  width: 12vw;
+  height: 22vh;
   padding: 8px;
   border: 1px rgba(179, 140, 119, 0.9) solid;
   border-radius: 45px;
@@ -108,7 +108,7 @@
 
 .note-image{
   margin-top: 7%;
-  width: 95%;
+  width: 90%;
   height: 80%;
 }
 
@@ -130,8 +130,8 @@
 }
 
 .arrow-image{
-  width: 30px;
-  height: 30px;
+  width: 1.6vw;
+  height: 3vh;
   margin-top: 10px;
 }
 

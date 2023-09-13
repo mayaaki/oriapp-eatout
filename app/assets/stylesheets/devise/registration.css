@@ -10,7 +10,7 @@
 .second-header {
   width: 100%;
   min-width: 800px;
-  height: 200px;
+  height: 19vh;
   background-color: antiquewhite;
   display: flex;
   align-items: center;
@@ -18,7 +18,7 @@
 }
 
 .first-logo {
-  width: 185px;
+  width: 9.5vw;
 }
 
 .form-wrap {
