@@ -48,9 +48,7 @@
                         <%= link_to '編集', "/budgets/#{record.budget_id}/records/#{record.id}/edit" %>
                       </li>
                       <li class="dropdown__list">
-                        <div id="delete-btn<%= record.id %>">
-                          <%= link_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", data: { turbo_method: :delete, turbo_confirm: '本当に削除しますか?'} %>
-                        </div>
+                        <%= button_to '削除', "/budgets/#{record.budget_id}/records/#{record.id}", method: :delete,  data: { turbo: :false, turbo_confirm: '本当に削除しますか?'}, class:'delete-btn' %>
                       </li>
                     </ul>
                   </div>

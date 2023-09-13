@@ -183,6 +183,31 @@
   color: #464d52;
 }
 
+.more_list li form{
+  text-align: center;
+  background-color: #fff;
+}
+
+.more_list li form:hover{
+  background-color: #f98600;
+}
+
+.delete-btn:hover{
+  background-color: #f98600;
+  color: #fff;
+}
+
+.delete-btn{
+  padding: 5px;
+  font-size: 15px;
+  text-decoration: none;
+  text-align: center;
+  color: #464d52;
+  border: none;
+  background-color: #fff;
+  width: 100%;
+}
+
 /*sample*/
 
 .sample-user{
